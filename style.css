@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f0ff;
+  color: #4b3f72;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(245,240,255,0.9);
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #6c5ce7;
+  font-weight: 500;
+}
+
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  background: #c8a2ff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b084f5;
+}
+
+/* Masonry */
+.masonry {
+  column-count: 2;
+  column-gap: 15px;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Puzzle */
+.puzzle-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.piece {
+  background: #e0ccff;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: grab;
+}
+
+/* Gallery */
+.gallery img {
+  width: 90%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Timeline */
+.timeline {
+  border-left: 3px solid #c8a2ff;
+  padding-left: 20px;
+}
+
+.event {
+  margin-bottom: 30px;
+}
+
+/* Meme */
+.meme img {
+  width: 80%;
+  border-radius: 15px;
+}
+
+/* Final Section Gradient */
+.final {
+  background: linear-gradient(#f5f0ff, #ffb6c1);
+}
+
+/* Loading */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #f5f0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.progress {
+  width: 0;
+  height: 5px;
+  background: #c8a2ff;
+  animation: load 3s forwards;
+}
+
+@keyframes load {
+  to { width: 100%; }
+}
+
+/* Petals */
+.petals::before {
+  content: "🌸 🌸 🌸 🌸 🌸 🌸";
+  position: fixed;
+  animation: fall 10s linear infinite;
+  font-size: 24px;
+}
+
+@keyframes fall {
+  from { top: -10%; }
+  to { top: 110%; }
+  }
